@@ -1,0 +1,140 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f7f6;
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+p {
+    font-size: 14px;
+    color: #9b9b9b;
+    margin-bottom: 40px;
+}
+.pricing-table {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 60px;
+}
+.pricing-table .plan {
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.pricing-table .plan.popular {
+    position: relative;
+    border: 2px solid #00c853;
+}
+.pricing-table .plan.popular::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #00c853;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+.plan h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.plan .price {
+    font-size: 32px;
+    margin: 10px 0;
+}
+.plan .price span {
+    font-size: 16px;
+    color: #9b9b9b;
+}
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+.plan ul li {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #4a4a4a;
+}
+.plan ul li i {
+    color: #00c853;
+    margin-right: 10px;
+}
+.plan button {
+    background: #00c853;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.plan button:hover {
+    background: #00a844;
+}
+.horizontal-pricing-table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.horizontal-pricing-table .plan {
+    width: 60%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+.horizontal-pricing-table .plan.popular {
+    border: 2px solid #00c853;
+}
+.horizontal-pricing-table .plan.popular::before {
+    content: 'MOST POPULAR';
+    position: absolute;
+    top: 10px;
+    left: -50px;
+    background: #00c853;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+.horizontal-pricing-table .plan h2 {
+    font-size: 18px;
+    margin: 0;
+}
+.horizontal-pricing-table .plan .price {
+    font-size: 24px;
+    margin: 0;
+}
+.horizontal-pricing-table .plan .price span {
+    font-size: 14px;
+    color: #9b9b9b;
+}
+.horizontal-pricing-table .plan ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.horizontal-pricing-table .plan ul li {
+    font-size: 14px;
+    margin: 5px 0;
+}
+.horizontal-pricing-table .plan button {
+    padding: 10px 20px;
+}

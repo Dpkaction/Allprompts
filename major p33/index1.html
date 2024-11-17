@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tools Platform</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #1e40af;
+            --light: #f3f4f6;
+            --dark: #1f2937;
+            --accent: #8b5cf6;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+        }
+
+        /* Previous styles remain the same until demo section */
+
+        .demo-section {
+            background: var(--light);
+            padding: 4rem 2rem;
+        }
+
+        .demo-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .demo-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: var(--light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tool-title {
+            flex-grow: 1;
+        }
+
+        .tool-badge {
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+
+        .demo-input {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .demo-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .demo-output {
+            background: var(--light);
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            min-height: 60px;
+        }
+
+        .demo-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .demo-button:hover {
+            background: var(--secondary);
+        }
+
+        .tool-options {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tool-option {
+            padding: 0.5rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tool-option.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .color-picker {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .color-option {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+
+        .color-option.active {
+            border-color: var(--primary);
+        }
+
+        .slider-container {
+            margin-bottom: 1rem;
+        }
+
+        .slider {
+            width: 100%;
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            background: var(--primary);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .upload-area {
+            border: 2px dashed #ddd;
+            padding: 2rem;
+            text-align: center;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+        }
+
+        .upload-area:hover {
+            border-color: var(--primary);
+        }
+
+        .chart-container {
+            height: 200px;
+            background: var(--light);
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+
+    <section id="demo" class="demo-section">
+        <div class="demo-container">
+            <h2>Interactive AI Tools</h2>
+            <div class="demo-grid">
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">📝</div>
+                        <h3 class="tool-title">AI Content Generator</h3>
+                        <span class="tool-badge">Popular</span>
+                    </div>
+                    <select class="demo-input">
+                        <option>Blog Post</option>
+                        <option>Social Media Post</option>
+                        <option>Product Description</option>
+                    </select>
+                    <textarea class="demo-textarea" placeholder="Enter your topic or keywords"></textarea>
+                    <button class="demo-button">Generate Content</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🎨</div>
+                        <h3 class="tool-title">Image Style Transfer</h3>
+                    </div>
+                    <div class="upload-area">
+                        <p>Drop your image here or click to upload</p>
+                    </div>
+                    <div class="tool-options">
+                        <span class="tool-option active">Monet</span>
+                        <span class="tool-option">Van Gogh</span>
+                        <span class="tool-option">Picasso</span>
+                    </div>
+                    <button class="demo-button">Apply Style</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🤖</div>
+                        <h3 class="tool-title">Code Assistant</h3>
+                    </div>
+                    <select class="demo-input">
+                        <option>Python</option>
+                        <option>JavaScript</option>
+                        <option>Java</option>
+                    </select>
+                    <textarea class="demo-textarea" placeholder="Paste your code here"></textarea>
+                    <div class="tool-options">
+                        <span class="tool-option active">Optimize</span>
+                        <span class="tool-option">Debug</span>
+                        <span class="tool-option">Explain</span>
+                    </div>
+                    <button class="demo-button">Analyze Code</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">📊</div>
+                        <h3 class="tool-title">Data Visualizer</h3>
+                    </div>
+                    <div class="upload-area">
+                        <p>Upload CSV or JSON file</p>
+                    </div>
+                    <div class="chart-container"></div>
+                    <div class="tool-options">
+                        <span class="tool-option active">Line</span>
+                        <span class="tool-option">Bar</span>
+                        <span class="tool-option">Pie</span>
+                    </div>
+                    <button class="demo-button">Generate Chart</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🎯</div>
+                        <h3 class="tool-title">SEO Optimizer</h3>
+                    </div>
+                    <input type="url" class="demo-input" placeholder="Enter URL">
+                    <textarea class="demo-textarea" placeholder="Enter target keywords"></textarea>
+                    <div class="demo-output">
+                        SEO Score: 0/100
+                    </div>
+                    <button class="demo-button">Analyze SEO</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🔤</div>
+                        <h3 class="tool-title">Language Translator</h3>
+                    </div>
+                    <select class="demo-input">
+                        <option>English</option>
+                        <option>Spanish</option>
+                        <option>French</option>
+                        <option>German</option>
+                        <option>Chinese</option>
+                    </select>
+                    <textarea class="demo-textarea" placeholder="Enter text to translate"></textarea>
+                    <div class="demo-output"></div>
+                    <button class="demo-button">Translate</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🎵</div>
+                        <h3 class="tool-title">Music Generator</h3>
+                    </div>
+                    <div class="tool-options">
+                        <span class="tool-option active">Classical</span>
+                        <span class="tool-option">Jazz</span>
+                        <span class="tool-option">Electronic</span>
+                    </div>
+                    <div class="slider-container">
+                        <p>Tempo</p>
+                        <input type="range" class="slider" min="60" max="180" value="120">
+                    </div>
+                    <div class="slider-container">
+                        <p>Duration</p>
+                        <input type="range" class="slider" min="30" max="180" value="60">
+                    </div>
+                    <button class="demo-button">Generate Music</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">📱</div>
+                        <h3 class="tool-title">UI Generator</h3>
+                    </div>
+                    <textarea class="demo-textarea" placeholder="Describe your desired user interface"></textarea>
+                    <div class="tool-options">
+                        <span class="tool-option active">Mobile</span>
+                        <span class="tool-option">Desktop</span>
+                        <span class="tool-option">Tablet</span>
+                    </div>
+                    <div class="color-picker">
+                        <div class="color-option active" style="background: #2563eb"></div>
+                        <div class="color-option" style="background: #10b981"></div>
+                        <div class="color-option" style="background: #8b5cf6"></div>
+                    </div>
+                    <button class="demo-button">Generate UI</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🔍</div>
+                        <h3 class="tool-title">Document Analyzer</h3>
+                    </div>
+                    <div class="upload-area">
+                        <p>Upload PDF or Document</p>
+                    </div>
+                    <div class="tool-options">
+                        <span class="tool-option active">Summary</span>
+                        <span class="tool-option">Keywords</span>
+                        <span class="tool-option">Sentiment</span>
+                    </div>
+                    <div class="demo-output"></div>
+                    <button class="demo-button">Analyze Document</button>
+                </div>
+
+                <div class="demo-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">🎮</div>
+                        <h3 class="tool-title">3D Model Generator</h3>
+                    </div>
+                    <textarea class="demo-textarea" placeholder="Describe the 3D model you want to create"></textarea>
+                    <div class="tool-options">
+                        <span class="tool-option active">Character</span>
+                        <span class="tool-option">Object</span>
+                        <span class="tool-option">Scene</span>
+                    </div>
+                    <div class="slider-container">
+                        <p>Detail Level</p>
+                        <input type="range" class="slider" min="1" max="5" value="3">
+                    </div>
+                    <button class="demo-button">Generate Model</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

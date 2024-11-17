@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage - Travel Booking Service</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header class="header">
+        <div class="logo">V<span>O</span>YAGE</div>
+    </header>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>TO TRAVEL IS TO LIVE</h1>
+            <p>You Don't Need Magic to Disappear. All you need is a destination.</p>
+            <a href="#" class="btn">BOOK YOUR TRIP</a>
+        </div>
+    </div>
+    <form class="booking-form">
+        <div class="form-group">
+            <label for="destination">Destination</label>
+            <select id="destination" required>
+                <option value="">Select destination</option>
+                <option value="paris">Paris</option>
+                <option value="tokyo">Tokyo</option>
+                <option value="newyork">New York</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="check-in">Check-in Date</label>
+            <input type="date" id="check-in" required>
+        </div>
+        <div class="form-group">
+            <label for="check-out">Check-out Date</label>
+            <input type="date" id="check-out" required>
+        </div>
+        <div class="form-group">
+            <label for="guests">Number of Guests</label>
+            <select id="guests" required>
+                <option value="">Select guests</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4+</option>
+            </select>
+        </div>
+        <button type="submit" class="search-btn">Search</button>
+    </form>
+</body>
+</html>

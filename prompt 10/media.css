@@ -1,0 +1,14 @@
+
+@media (max-width: 768px) {
+    .pricing-container {
+        padding: 20px;
+    }
+
+    .plan.popular {
+        transform: scale(1);
+    }
+
+    .pricing-plans {
+        grid-template-columns: 1fr;
+    }
+}

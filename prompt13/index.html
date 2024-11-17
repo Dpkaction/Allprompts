@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+       
+</head>
+<body>
+    <div class="modal-container">
+        <div class="modal">
+            <button class="close-btn">×</button>
+            <svg class="geometric-pattern" viewBox="0 0 100 100">
+                <path fill="#4CAF50" d="M10,10 L90,10 L50,90 Z" opacity="0.8"/>
+                <path fill="#4CAF50" d="M30,20 L70,20 L50,70 Z" opacity="0.1"/>
+            </svg>
+            <div class="content">
+                <h2>Stay in the Loop!</h2>
+                <p class="subtitle">Join our newsletter for exclusive updates and special offers.</p>
+                <form class="signup-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email address" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Subscribe Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            document.querySelector('.modal-container').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

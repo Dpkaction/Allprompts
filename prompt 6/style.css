@@ -1,0 +1,141 @@
+
+body {
+         margin: 0;
+         font-family: 'Roboto', sans-serif;
+         background-color: #000;
+         color: #fff;
+     }
+     header {
+         background-color: #333;
+         padding: 10px 0;
+         text-align: center;
+     }
+     header img {
+         max-width: 100px;
+     }
+     nav {
+         display: flex;
+         justify-content: center;
+         background-color: #444;
+         padding: 10px 0;
+     }
+     nav a {
+         color: #fff;
+         text-decoration: none;
+         margin: 0 15px;
+         font-weight: bold;
+     }
+     .hero {
+         position: relative;
+         text-align: center;
+         color: white;
+     }
+     .hero img {
+         width: 100%;
+         height: auto;
+     }
+     .hero .search-bar {
+         position: absolute;
+         bottom: 20px;
+         left: 50%;
+         transform: translateX(-50%);
+         display: flex;
+         gap: 10px;
+     }
+     .hero .search-bar input, .hero .search-bar button {
+         padding: 10px;
+         border: none;
+         border-radius: 5px;
+     }
+     .hero .search-bar button {
+         background-color: #ff9900;
+         color: #fff;
+         cursor: pointer;
+     }
+     .features {
+         display: flex;
+         justify-content: space-around;
+         padding: 50px 0;
+         background-color: #111;
+     }
+     .features .feature {
+         text-align: center;
+         width: 20%;
+     }
+     .features .feature h2 {
+         color: #ff9900;
+     }
+     .about {
+         text-align: center;
+         padding: 50px 0;
+         background-color: #222;
+     }
+     .about img {
+         width: 45%;
+         margin: 0 2.5%;
+     }
+     .about p {
+         width: 60%;
+         margin: 20px auto;
+     }
+     .about button {
+         padding: 10px 20px;
+         margin: 10px;
+         border: none;
+         border-radius: 5px;
+         cursor: pointer;
+     }
+     .about .btn-primary {
+         background-color: #ff9900;
+         color: #fff;
+     }
+     .about .btn-secondary {
+         background-color: #444;
+         color: #fff;
+     }
+     .tour-packages {
+         text-align: center;
+         padding: 50px 0;
+         background-color: #111;
+     }
+     .tour-packages img {
+         width: 20%;
+         margin: 0 2.5%;
+     }
+     .testimony {
+         text-align: center;
+         padding: 50px 0;
+         background-color: #222;
+     }
+     .testimony p {
+         width: 60%;
+         margin: 20px auto;
+     }
+     .testimony .quote {
+         font-size: 2em;
+         color: #ff9900;
+     }
+     .footer {
+         background-color: #333;
+         padding: 20px 0;
+         text-align: center;
+     }
+     .footer img {
+         width: 15%;
+         margin: 0 2.5%;
+     }
+     .footer .contact, .footer .about, .footer .discover, .footer .social {
+         display: inline-block;
+         width: 22%;
+         vertical-align: top;
+         text-align: left;
+         padding: 0 10px;
+     }
+     .footer .contact p, .footer .about p, .footer .discover p, .footer .social p {
+         margin: 5px 0;
+     }
+     .footer .social a {
+         color: #fff;
+         text-decoration: none;
+         margin: 0 5px;
+     }

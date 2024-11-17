@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Center Flyer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="checkout-form">
+      <div class="section">
+        <h2>Customer Info</h2>
+        <div class="form-group">
+          <label>Email<span class="required">*</span></label>
+          <input type="email" required>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Shipping Address</h2>
+        <div class="form-group">
+          <label>Full Name<span class="required">*</span></label>
+          <input type="text" required>
+        </div>
+        <div class="form-group">
+          <label>Street Address<span class="required">*</span></label>
+          <input type="text" required>
+        </div>
+        <div class="form-group">
+          <label>Street Address 2</label>
+          <input type="text">
+        </div>
+        <div class="address-grid">
+          <div class="form-group">
+            <label>City<span class="required">*</span></label>
+            <input type="text" required>
+          </div>
+          <div class="form-group">
+            <label>State/Province</label>
+            <input type="text">
+          </div>
+          <div class="form-group">
+            <label>ZIP/Postal Code<span class="required">*</span></label>
+            <input type="text" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Country<span class="required">*</span></label>
+          <select required>
+            <option value="">Select Country</option>
+            <option value="US">United States</option>
+            <option value="CA">Canada</option>
+            <option value="UK">United Kingdom</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Shipping Method</h2>
+        <div class="shipping-option">
+          <div>
+            <label>
+              <input type="radio" name="shipping" value="flat">
+              Flat-Rate
+            </label>
+            <div class="shipping-details">Standard flat rate for all shipments.</div>
+          </div>
+          <span class="price">$18.90 USD</span>
+        </div>
+        <div class="shipping-option">
+          <div>
+            <label>
+              <input type="radio" name="shipping" value="expedited">
+              Expedited Shipping
+            </label>
+            <div class="shipping-details">Expedited shipping to get the shipment in a day or two.</div>
+          </div>
+          <span class="price">$40.95 USD</span>
+        </div>
+        <div class="shipping-option">
+          <div>
+            <label>
+              <input type="radio" name="shipping" value="overnight">
+              Overnight Shipping
+            </label>
+            <div class="shipping-details">An expensive option to get the shipment on the next business day.</div>
+          </div>
+          <span class="price">$74.10 USD</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="order-summary">
+      <h2>Order Summary</h2>
+      <div class="product-item">
+        <div class="product-image"></div>
+        <div class="product-info">
+          <div>Black T-Shirt Logo centre print</div>
+          <div class="shipping-details">Quantity: 1</div>
+        </div>
+        <div class="price">$24.00</div>
+      </div>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span>$3,476.00 USD</span>
+      </div>
+      <div class="summary-row">
+        <span>Flat-Rate</span>
+        <span>$18.90 USD</span>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <span>$3,494.90 USD</span>
+      </div>
+      <button class="checkout-button">Checkout</button>
+    </div>
+  </div>
+</body>
+</html>

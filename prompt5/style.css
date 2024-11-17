@@ -1,0 +1,150 @@
+
+   body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #161b22;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .sidebar a {
+            color: #c9d1d9;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            font-size: 16px;
+        }
+        .sidebar a i {
+            margin-right: 10px;
+        }
+        .sidebar .active {
+            color: #58a6ff;
+        }
+        .sidebar .section-title {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #8b949e;
+        }
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header input {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 8px 12px;
+            color: #c9d1d9;
+            width: 300px;
+        }
+        .header .user-info {
+            display: flex;
+            align-items: center;
+        }
+        .header .user-info img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+        .profile-card {
+            background-color: #161b22;
+            border-radius: 10px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .profile-card img {
+            border-radius: 50%;
+            border: 3px solid #ff7b72;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        .profile-card h2 {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .profile-card p {
+            font-size: 14px;
+            color: #8b949e;
+        }
+        .profile-card .stats {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .profile-card .stats div {
+            text-align: center;
+        }
+        .profile-card .stats div p {
+            margin: 5px 0;
+        }
+        .profile-card .stats div p:first-child {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .settings-card {
+            background-color: #161b22;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .settings-card h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .settings-card .setting {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .settings-card .setting p {
+            margin: 0;
+        }
+        .settings-card .setting input {
+            width: 50px;
+            text-align: center;
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            color: #c9d1d9;
+        }
+        .settings-card .avatars {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .settings-card .avatars img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+        }
+  
